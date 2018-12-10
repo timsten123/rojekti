@@ -1,0 +1,32 @@
+<?php
+function palaute_schema() {
+$schema['palaute'] = array(
+ 'fields' => array(
+ 'id' => array(
+ 'type' => 'serial',
+ 'not null' => TRUE,
+ ),
+ 'nimi' => array(
+ 'type' => 'varchar',
+ 'length' => 40,
+ 'not null' => TRUE,
+ ),
+ 'email' => array(
+ 'type' => 'varchar',
+ 'length' => 40,
+ 'not null' => TRUE,
+ ),
+ 'palaute' => array(
+ 'type' => 'varchar',
+ 'length' => 500,
+ 'not null' => TRUE,
+ ),
+  'luotu'=>array(
+  'type' => 'text',
+  'not null' => TRUE ,
+ ),
+ ),
+ 'primary key' => array('id'),
+ );
+ return $schema;
+}

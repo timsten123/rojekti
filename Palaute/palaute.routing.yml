@@ -1,0 +1,26 @@
+palaute.palaute_form:
+  path: '/palaute/form/palaute'
+  defaults:
+    _form: '\Drupal\palaute\Form\PalauteForm'
+    _title: 'Palaute'
+  requirements:
+    _access: 'TRUE'
+
+
+palaute.display_table_controller_display:
+  path: '/palaute/hello/table'
+  defaults:
+    _controller: '\Drupal\palaute\Controller\DisplayTableController::display'
+    _title: 'Palautteet'
+  requirements:
+    _permission: 'access administration pages'
+
+
+
+palaute.delete_form:
+  path: '/palaute/form/delete/{cid}'
+  defaults:
+    _form: '\Drupal\palaute\Form\DeleteForm'
+    _title: 'DeleteForm'
+  requirements:
+    _access: 'TRUE'
